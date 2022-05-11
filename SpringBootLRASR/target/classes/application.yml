@@ -1,0 +1,11 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10000MB
+      max-request-size: 100000MB
+
+upload:
+  path: ./src/main/java/com/jxz/HSI/
+
+server:
+  port: 8888

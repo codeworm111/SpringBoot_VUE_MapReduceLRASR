@@ -1,0 +1,13 @@
+ENVI
+ description = {
+ samples = 10000
+ GTRow   = 100
+ GTCol   = 100
+ bands   = 186
+ parallelnum=4
+ data type = 4
+ lambda = 0.1
+ beta = 0.1
+ K = 15
+ P = 20
+ }
