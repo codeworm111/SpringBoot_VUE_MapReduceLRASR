@@ -25,15 +25,17 @@ public class HDFSUpload {
         conf =new Configuration();
         //2.设置副本数
         conf.set("dfs.replication","1");
+        //3.设置checksum
+        conf.set("dfs.bytes-per-checksum","1");
     }
 
     //上传文件
     public void upload() throws Exception, IOException {
 
-        //3.设置block大小为1M ,上传时候使用,仅对当前方法有效
+        //4.设置block大小为分片大小 ,上传时候使用,仅对当前方法有效
         long size1=new File("./src/main/java/com/jxz/HSI/"+jobname+"_gt.bin").length();
         conf.set("dfs.blocksize",String.valueOf(size1));
-        //4.创建文件系统对象
+        //5.创建文件系统对象
         fs = FileSystem.get(new URI("hdfs://master:9000/"),conf);
         //前面为上传文件的路径，后面是HDFS中的路径和文件的新名称
         fs.copyFromLocalFile(new Path("./src/main/java/com/jxz/HSI/"+jobname+"_gt.bin"),

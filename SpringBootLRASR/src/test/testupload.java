@@ -1,6 +1,5 @@
 import com.jxz.service.HDFSupload.HDFSUpload;
 
-import java.io.File;
 
 public class testupload {
     public static void main(String[] args) throws Exception {

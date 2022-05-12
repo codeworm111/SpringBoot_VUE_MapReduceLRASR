@@ -2,14 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fca1fc1a-8d84-4cd6-b789-01269e0299e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBootLRASR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBootLRASR.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jxz/service/HDFSupload/HDFSUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxz/service/HDFSupload/HDFSUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jxz/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testupload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testupload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/LRASRApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/controller/UploadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/HDFSupload/HDFSUpload.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/AUC$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/AUC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DataInputFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DataRecordReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processDicCon$1$$anonfun$apply$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processDicCon$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processDicCon$1$$anonfun$apply$2$$anonfun$apply$mcVI$sp$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processDicCon$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processDicCon$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processFullDic$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processFullDic$2$$anonfun$apply$mcVI$sp$3$$anonfun$apply$mcVI$sp$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processFullDic$2$$anonfun$apply$mcVI$sp$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR$$anonfun$processFullDic$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/DicConMR.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/GtData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/HeadHdr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/HyperCov.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getFinalCenter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getFinalCenter$2$$anonfun$apply$2$$anonfun$apply$mcVI$sp$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getFinalCenter$2$$anonfun$apply$2$$anonfun$apply$mcVI$sp$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getFinalCenter$2$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getFinalCenter$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getFinalCenter$3$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getFinalCenter$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getInitCenter$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getInitCenter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getInitCenter$2$$anonfun$apply$4$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getInitCenter$2$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR$$anonfun$getInitCenter$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/KmeansMR.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LADMAP_LRASR.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMR$$anonfun$processE$1$$anonfun$apply$mcVI$sp$2$$anonfun$apply$mcVI$sp$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMR$$anonfun$processE$1$$anonfun$apply$mcVI$sp$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMR$$anonfun$processE$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMR$$anonfun$processE$2$$anonfun$apply$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMR$$anonfun$processE$2$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMR$$anonfun$processE$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMR.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMain$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMain$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMain$$anonfun$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMain$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/LRASRMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Repartition$$anonfun$processRepartitionRDD$1$$anonfun$apply$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Repartition$$anonfun$processRepartitionRDD$1$$anonfun$apply$1$$anonfun$apply$mcVI$sp$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Repartition$$anonfun$processRepartitionRDD$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Repartition$$anonfun$processRepartitionRDD$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Repartition$$anonfun$processRepartitionRDD$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Repartition$ClassPartitioner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Repartition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/RxDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/SolveL1L2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Sort$RXElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Sort$RXElementComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Sort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/Tools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/LRASRalgorithm/soft.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/config/UploadConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/file_upload_service/FileService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jxz/service/file_upload_service/FileUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testupload.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +174,8 @@
       <updated>1652235423815</updated>
       <workItem from="1652235451765" duration="2498000" />
       <workItem from="1652269924190" duration="5085000" />
-      <workItem from="1652278653733" duration="6119000" />
+      <workItem from="1652278653733" duration="6928000" />
+      <workItem from="1652340395500" duration="57000" />
     </task>
     <servers />
   </component>
@@ -138,22 +199,22 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652277617545" />
-    <state width="1867" height="365" key="GridCell.Tab.0.bottom" timestamp="1652274835590">
+    <state width="1867" height="333" key="GridCell.Tab.0.bottom" timestamp="1652329495687">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="365" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652274835590" />
-    <state width="1867" height="365" key="GridCell.Tab.0.center" timestamp="1652274835590">
+    <state width="1867" height="333" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652329495687" />
+    <state width="1867" height="333" key="GridCell.Tab.0.center" timestamp="1652329495538">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="365" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652274835590" />
-    <state width="1867" height="365" key="GridCell.Tab.0.left" timestamp="1652274835590">
+    <state width="1867" height="333" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652329495538" />
+    <state width="1867" height="333" key="GridCell.Tab.0.left" timestamp="1652329494381">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="365" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652274835590" />
-    <state width="1867" height="365" key="GridCell.Tab.0.right" timestamp="1652274835590">
+    <state width="1867" height="333" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652329494361" />
+    <state width="1867" height="333" key="GridCell.Tab.0.right" timestamp="1652329495539">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="365" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652274835590" />
+    <state width="1867" height="333" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652329495539" />
     <state width="1867" height="365" key="GridCell.Tab.1.bottom" timestamp="1652274835590">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
