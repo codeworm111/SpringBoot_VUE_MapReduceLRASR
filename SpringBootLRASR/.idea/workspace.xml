@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fca1fc1a-8d84-4cd6-b789-01269e0299e5" name="Default Changelist" comment="" />
+    <list default="true" id="fca1fc1a-8d84-4cd6-b789-01269e0299e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBootLRASR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBootLRASR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxz/service/HDFSupload/HDFSUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxz/service/HDFSupload/HDFSUpload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jxz/DemoApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +26,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -37,6 +49,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="2901vtT13jNufCNVfxNllVnORxQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,10 +60,11 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringMVCSparkLRASR" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -67,7 +81,14 @@
       <recent name="C:\Users\27801\Desktop\SpringBootLRASR\src\main\java\com\jxz\controller" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.testupload">
+    <configuration name="testupload" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testupload" />
+      <module name="SpringBootLRASR" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LRASRApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SpringBootLRASR" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jxz.LRASRApplication" />
@@ -75,6 +96,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.testupload" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -88,6 +114,7 @@
       <updated>1652235423815</updated>
       <workItem from="1652235451765" duration="2498000" />
       <workItem from="1652269924190" duration="5085000" />
+      <workItem from="1652278653733" duration="6119000" />
     </task>
     <servers />
   </component>
@@ -143,9 +170,21 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1867" height="365" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652274835590" />
-    <state x="2265" y="0" key="SettingsEditor" timestamp="1652235974440">
+    <state x="2297" y="93" key="Maven.ArtifactSearchDialog" timestamp="1652283398377">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2265" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652235974440" />
+    <state x="2297" y="93" key="Maven.ArtifactSearchDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652283398377" />
+    <state x="2265" y="0" key="SettingsEditor" timestamp="1652283439564">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2265" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652283439564" />
+    <state x="2413" y="0" width="933" height="1040" key="find.popup" timestamp="1652283013895">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2413" y="0" width="933" height="1040" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652283013895" />
+    <state x="2452" y="237" key="run.anything.popup" timestamp="1652323652523">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2452" y="237" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1652323652523" />
   </component>
 </project>
