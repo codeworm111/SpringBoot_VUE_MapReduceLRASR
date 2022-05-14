@@ -1,6 +1,6 @@
 <script>
   const server_config = {
-    url: 'http://localhost:8888'
+    url: 'http://192.168.2.47:8888'
   };
   export default {
     server_config

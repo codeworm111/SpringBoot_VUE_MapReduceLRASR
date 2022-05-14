@@ -20,7 +20,7 @@
                     <el-submenu index="2">
                         <template slot="title"><i class="el-icon-message"></i>异常检测算法运行</template>
                         <el-submenu index="2-1">
-                            <span slot="title" @click="redirectUrl('/lRASR')">结果展示</span>
+                            <span slot="title" @click="redirectUrl('/algorithm')">运行算法</span>
                         </el-submenu>
                     </el-submenu>
                     <el-submenu index="3">
