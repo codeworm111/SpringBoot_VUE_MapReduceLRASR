@@ -7,12 +7,12 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 object LRASRMain {
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Tuple3[Array[Double],java.lang.Double,java.lang.Double] = {
     val jobname=args(0)   //jobname and the filename
-    val hdfspath=args(1)  //the hadoop directory of all the data
+    val hdfspath=args(1)  //the hadoop directory of all the data  //hdfs://master:9000/jxz/
 
     val  conf= new SparkConf().setAppName(jobname)
-      .setMaster("local[4]")
+      .setMaster("local[2]")
       .set("spark.testing.memory", "2147480000")
       .set("spark.driver.memory", "2147480000")
       .set("spark.driver.maxResultSize","2147480000")
@@ -70,10 +70,13 @@ object LRASRMain {
     val lrasrmr = new LRASRMR(img2DRDD, broadcastHeader, broadFullDic)
     lrasrmr.process()
     val fullE: Array[Array[Double]] = lrasrmr.getFullE
+    val ECollect: Array[(Int, Array[Array[Double]], Array[Double])] =lrasrmr.getpartECollect
+    val stopC=ECollect(0)._3
 
     //record time t2
     val t2 = System.currentTimeMillis
-    System.out.println("MapReduce time:" + (t2 - t1) * 1.0 / 1000 + "s")
+    val MapReduce_time=(t2 - t1) * 1.0 / 1000
+    System.out.println("MapReduce time:" + MapReduce_time + "s")
 
     val re = Array.ofDim[Double](GT.length, GT(0).length)
     for (i <- 0 until fullE(0).length) {
@@ -85,9 +88,10 @@ object LRASRMain {
     }
 
     val auc = new AUC(GT, re)
-    val aucresult = auc.run
+    val aucresult: Double = auc.run
     System.out.println("AUC=" + aucresult)
     System.out.println("AUC Finish:" + df.format(new Date))
 
+    new Tuple3(stopC,aucresult,MapReduce_time);
   }
 }

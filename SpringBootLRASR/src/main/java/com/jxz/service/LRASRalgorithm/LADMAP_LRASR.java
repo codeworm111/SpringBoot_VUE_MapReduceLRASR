@@ -3,6 +3,9 @@ package com.jxz.service.LRASRalgorithm;
 import Jama.Matrix;
 import Jama.SingularValueDecomposition;
 import scala.Tuple2;
+import scala.Tuple3;
+
+import java.util.ArrayList;
 
 
 public class LADMAP_LRASR {
@@ -48,9 +51,10 @@ public class LADMAP_LRASR {
     }
 
 
-    public Tuple2<double[][],double[][]> run(){
+    public Tuple3<double[][],double[][],double[]> run(){
         init();
         int iter=0;
+        ArrayList<Double> stopCList=new ArrayList<>();
         while (iter<maxIter){
             Matrix tempMatrix;
             Matrix temp2Matrix;
@@ -158,6 +162,7 @@ public class LADMAP_LRASR {
             stopC2Down=XMatrix.normF();
             stopC2=stopC2Up/stopC2Down;
 
+            stopCList.add(stopC2);
             System.out.println("iter="+iter+" stopC(tol)="+stopC+" stopC2(tol2)="+stopC2+" mu="+Math.min(max_mu,mu*rho));
 
             if(stopC<tol&&stopC2<tol2){
@@ -169,7 +174,11 @@ public class LADMAP_LRASR {
             }
             iter++;
         }
-        return new Tuple2<>(S,E);
+        double[] stopCRes=new double[stopCList.size()];
+        for(int i=0;i<stopCList.size();i++){
+            stopCRes[i]=stopCList.get(i);
+        }
+        return new Tuple3<>(S,E,stopCRes);
     }
 
 }

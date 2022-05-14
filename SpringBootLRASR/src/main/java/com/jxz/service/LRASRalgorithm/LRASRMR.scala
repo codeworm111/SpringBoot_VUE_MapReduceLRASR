@@ -5,7 +5,7 @@ import org.apache.spark.rdd.RDD
 
 class LRASRMR(val blockImgTotal:RDD[(Int,Array[Array[Float]])],val headHdr: Broadcast[HeadHdr],
               val Dic:Broadcast[Array[Array[Double]]])extends Serializable {
-  var partECollect:Array[(Int,Array[Array[Double]])]=_
+  var partECollect:Array[(Int,Array[Array[Double]],Array[Double])]=_
   var fullE:Array[Array[Double]]=_
 
   private[this] def processE={
@@ -22,7 +22,7 @@ class LRASRMR(val blockImgTotal:RDD[(Int,Array[Array[Float]])],val headHdr: Broa
 
       val ladmap_lrasr = new LADMAP_LRASR(blockImgDataDouble, blockDic, headHdr.value.getLambda, headHdr.value.getBeta)
       val SE = ladmap_lrasr.run
-      (offset,SE._2)
+      (offset,SE._2,SE._3)
     }
     ).collect()
 
