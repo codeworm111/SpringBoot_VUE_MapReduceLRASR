@@ -1,0 +1,93 @@
+--准备工作：
+1.修改hadoop-2.10.1/etc/hadoop 中hdfs-site.xml，实验只记录运行时间，这里改小点分片不出错:
+<property>
+    <name>io.bytes.per.checksum</name>
+    <value>10</value>
+</property>
+
+2.
+在根目录创建“/jxz目录”，将Urban_img.bin、Urban_gt.bin、Urban_hdr.hdr、SparkLRASR.jar放于此；
+mkdir /jxz
+在HDFS中创建 “/jxz目录”，存放hdfs上传数据 ；
+hdfs dfs -mkdir /jxz
+
+
+实验一：采用Urban数据集
+1.文件上传：
+hadoop fs -D dfs.block.size=324000 -put /jxz/Urban_img.bin hdfs://10.10.10.13:9000/jxz/
+hadoop fs -D dfs.block.size=32000 -put /jxz/Urban_gt.bin hdfs://10.10.10.13:9000/jxz/
+hadoop fs -D dfs.block.size=170 -put /jxz/Urban_hdr.hdr hdfs://10.10.10.13:9000/jxz/
+
+2.并行实验：
+串行1：spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 1 --conf spark.cores.max=1 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Urban hdfs://10.10.10.70:9000/jxz/
+MapReduce time:1280.086s
+AUC=0.9233046270268533
+MapReduce time:1201.724s
+AUC=0.9325550999945942
+
+
+并行度2：spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 2 --conf spark.cores.max=1 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Urban hdfs://10.10.10.70:9000/jxz/
+MapReduce time:602.189s
+AUC=0.9286818374422935
+
+
+并行度4：spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 4 --conf spark.cores.max=1 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Urban hdfs://10.10.10.70:9000/jxz/
+MapReduce time:311.57s
+AUC=0.9245280766774261
+
+
+并行度8：spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 8 --conf spark.cores.max=1 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Urban hdfs://10.10.10.70:9000/jxz/
+MapReduce time:167.452s
+AUC=0.9141675469535606
+MapReduce time:164.969s
+AUC=0.896096300407569
+
+
+并行度16：spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 16 --conf spark.cores.max=1 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Urban hdfs://10.10.10.70:9000/jxz/
+MapReduce time:90.399s
+AUC=0.9165726699251701
+MapReduce time:90.803s
+AUC=0.9156834309108537
+
+
+实验二：采用Simulated数据集
+1.文件上传：
+hadoop fs -D dfs.block.size=465000 -put /jxz/Simulated_img.bin hdfs://10.10.10.70:9000/jxz/
+hadoop fs  -D dfs.block.size=40000 -put /jxz/Simulated_gt.bin hdfs://10.10.10.13:9000/jxz/
+hadoop fs  -D dfs.block.size=172 -put /jxz/Simulated_hdr.hdr hdfs://10.10.10.13:9000/jxz/ (需要修改一下hdfs-site.xml io.bytes.per.checksum到2)
+
+2.并行实验：
+串行1： spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 1 --conf spark.cores.max=1 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Simulated hdfs://10.10.10.70:9000/jxz/
+MapReduce time:1221.012s
+AUC=0.9247347660500614
+MapReduce time:1288.832s
+AUC=0.9246803590859694
+
+
+spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 1 --conf spark.cores.max=2 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Simulated hdfs://10.10.10.70:9000/jxz/
+MapReduce time:614.263s
+AUC=0.9270685997171152
+
+
+spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 1 --conf spark.cores.max=4 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Simulated hdfs://10.10.10.70:9000/jxz/
+MapReduce time:319.291s
+AUC=0.9264789920539902
+
+
+spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 1 --conf spark.cores.max=8 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Simulated hdfs://10.10.10.70:9000/jxz/
+MapReduce time:194.805s
+AUC=0.9386969532100161
+MapReduce time:170.435s
+AUC=0.9367383025027258
+MapReduce time:198.187s
+AUC=0.922082426550609
+
+
+spark-submit --master spark://10.10.10.70:7077 --executor-memory 1g --executor-cores 1 --conf spark.cores.max=16 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Simulated hdfs://10.10.10.70:9000/jxz/
+MapReduce time:102.748s
+AUC=0.925156420021771
+MapReduce time:100.88s
+AUC=0.9342695865070779
+
+git clone https://github.com/codeworm111/SpringBoot_VUE_MapReduceLRASR.git
+spark-submit --master spark://master:7077 --executor-memory 1g --executor-cores 1 --conf spark.cores.max=1 --driver-memory 1g --jars /jxz/SparkLRASR.jar --class com.jxz.LRASRMain /jxz/SparkLRASR.jar Urban hdfs://master:9000/jxz/
