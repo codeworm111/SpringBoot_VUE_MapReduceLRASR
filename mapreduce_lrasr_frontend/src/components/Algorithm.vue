@@ -33,6 +33,7 @@
         this.axios({
           method:'get',
           url:'http://192.168.2.47:8888/run/?method='+this.method+'&parallelism='+this.parallelism+"&jobname="+this.jobname,
+		      timeout:120*60*1000
         })
           .then(res=>{
             this.stopCArray=res.data.stopC
@@ -71,7 +72,6 @@
           series: [{
             name: 'stopC',
             type: 'bar',
-            label: { normal: { show: showLable, position: 'inside' } },
             data: this.stopCArray
           }],
           dataZoom: [{

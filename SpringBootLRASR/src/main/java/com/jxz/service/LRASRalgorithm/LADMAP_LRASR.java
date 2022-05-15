@@ -162,7 +162,7 @@ public class LADMAP_LRASR {
             stopC2Down=XMatrix.normF();
             stopC2=stopC2Up/stopC2Down;
 
-            stopCList.add(stopC2);
+            stopCList.add(stopC);
             System.out.println("iter="+iter+" stopC(tol)="+stopC+" stopC2(tol2)="+stopC2+" mu="+Math.min(max_mu,mu*rho));
 
             if(stopC<tol&&stopC2<tol2){
